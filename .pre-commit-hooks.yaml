@@ -3,3 +3,8 @@
     description: Manda un lindo saludo
     entry: check-saludo
     language: python
+-   id: conventional-commits
+    name: conventional-commits
+    description: conventional-commits
+    entry: conventional-commits
+    language: python
