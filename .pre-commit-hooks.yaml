@@ -1,0 +1,5 @@
+-   id: check-saludo
+    name: saludo
+    description: Manda un lindo saludo
+    entry: check-saludo
+    language: python
