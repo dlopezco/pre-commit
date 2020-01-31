@@ -6,6 +6,13 @@ def main():
     # example:
     # feat(apikey): added the ability to add api key to configuration
     pattern = r'(build|ci|docs|feat|fix|perf|refactor|style|test|chore|revert)(\([\w\-]+\))?:\s.*'
+    old, new, branch = sys.stdin.read().split()
+    print(old)
+    print(new)
+    print(branch)
+    proc = subprocess.Popen(["git", "rev-list", "--oneline","--first-parent" , "%s..%s" %(old, new)], stdout=subprocess.PIPE)
+    commitMessage=str(proc.stdout.readlines()[0])
+    print(commitMessage)
     try:
         message = subprocess.check_output(['HEAD']).decode('UTF-8')
     except:
