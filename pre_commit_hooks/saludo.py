@@ -1,5 +1,6 @@
 def main():
-    return print("hola guapx")
+    print("hola guapx")
+    return True
 
 
 if __name__ == '__main__':
