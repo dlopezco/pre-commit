@@ -10,6 +10,7 @@ def main():
         message = subprocess.check_output(['HEAD']).decode('UTF-8')
     except:
         raise Exception("No message joined for commit")
+    print(message)
     m = re.match(pattern, message)
     if m == None: raise Exception("conventional commit validation failed")
 
