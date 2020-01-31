@@ -8,3 +8,4 @@
     description: conventional-commits
     entry: conventional-commits
     language: python
+    stages: [commit-msg]
